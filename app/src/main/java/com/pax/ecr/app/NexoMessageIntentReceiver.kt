@@ -21,7 +21,6 @@ class NexoMessageIntentReceiver : BroadcastReceiver() {
         lastResponseTransactionId = nexoMessage.extractPOITransactionID()
         lastTransactionDatetime = nexoMessage.extractPOITimeStamp()
         responseText = nexoMessage.orEmpty()
-        purchaseMenuVisible = false
         if (nexoMessage.isLoginResponseFailure()) {
             Toast.makeText(
                 context,
